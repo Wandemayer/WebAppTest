@@ -22,4 +22,9 @@ public class User
     /// Возвращает Фамилию пользователя.
     /// </summary>
     public string LastName { get; set; } = string.Empty;
+    
+    /// <summary>
+    /// Возвращает коллекцию данных о посещениях пользователя.
+    /// </summary>
+    public ICollection<UserVisit> UserVisits { get; set; } = ArraySegment<UserVisit>.Empty;
 }

@@ -12,4 +12,9 @@ public class FlatDbContext(DbContextOptions<FlatDbContext> options) : DbContext(
     /// Возвращает таблицу пользователей.
     /// </summary>
     public DbSet<User> Users { get; set; } = null!;
+    
+    /// <summary>
+    /// Возвращает таблицу с данными о посещениях пользователей.
+    /// </summary>
+    public DbSet<UserVisit> Visits { get; set; } = null!;
 }
