@@ -6,7 +6,7 @@ namespace TestApp.Controllers;
 public static class Messages
 {
     /// <summary>
-    /// Человек {0} не найден.
+    /// Объект "{0}" не найден.
     /// </summary>
-    public static string ManNotFound = "Человек {0} не найден";
+    public static string NotFound = "Объект \"{0}\" не найден";
 }

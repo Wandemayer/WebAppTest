@@ -60,7 +60,7 @@ public class TestDataController(FlatDbContext _flatDbContext) : ControllerBase
 
         if (user is null)
         {
-            return BadRequest(string.Format(Messages.ManNotFound, userId));
+            return BadRequest(string.Format(Messages.NotFound, userId));
         }
 
         await _flatDbContext.Entry(user).Collection(p => p.UserVisits).LoadAsync();
@@ -82,7 +82,7 @@ public class TestDataController(FlatDbContext _flatDbContext) : ControllerBase
         
         if (user is null)
         {
-            return BadRequest(string.Format(Messages.ManNotFound, userId));
+            return BadRequest(string.Format(Messages.NotFound, userId));
         }
 
         var visit = new UserVisit
