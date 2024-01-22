@@ -17,4 +17,14 @@ public class FlatDbContext(DbContextOptions<FlatDbContext> options) : DbContext(
     /// Возвращает таблицу с данными о посещениях пользователей.
     /// </summary>
     public DbSet<UserVisit> Visits { get; set; } = null!;
+    
+    /// <summary>
+    /// Возвращает таблицу с запросами на сбор данных.
+    /// </summary>
+    public DbSet<StatisticQuery> Queries { get; set; } = null!;
+
+    /// <summary>
+    /// Возвращает таблицу с статистическими данными.
+    /// </summary>
+    public DbSet<StatisticData> Statistic { get; set; } = null!;
 }
